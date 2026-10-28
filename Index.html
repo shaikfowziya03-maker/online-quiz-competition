@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Competition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>🏆 Quiz Competition</h1>
+            <p>Challenge yourself and test your knowledge!</p>
+        </header>
+
+        <section id="home" class="card">
+            <h2>Welcome to the Competition</h2>
+
+            <label for="playerName">Participant Name</label>
+            <input id="playerName" type="text"
+                   placeholder="Enter your name" maxlength="50">
+
+            <label for="category">Choose Category</label>
+            <select id="category">
+                <option value="General Knowledge">General Knowledge</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Science">Science</option>
+            </select>
+
+            <p>⏱ Time limit: 60 seconds</p>
+            <p id="bestScore">Best score: Not available</p>
+
+            <button id="startBtn">Start Competition</button>
+            <p id="homeMessage" role="alert"></p>
+        </section>
+
+        <section id="quiz" class="card" hidden>
+            <div class="top">
+                <span id="playerLabel"></span>
+                <span id="timer">60 seconds</span>
+            </div>
+
+            <div class="progress">
+                <div id="progressBar"></div>
+            </div>
+
+            <p id="questionNumber"></p>
+            <h2 id="question"></h2>
+            <div id="options"></div>
+
+            <p id="quizMessage" role="alert"></p>
+            <button id="nextBtn">Next Question</button>
+        </section>
+
+        <section id="result" class="card" hidden>
+            <h2>Competition Result</h2>
+            <p id="resultHeading"></p>
+
+            <div class="stats">
+                <div>Total Questions<strong id="total">0</strong></div>
+                <div>Attempted<strong id="attempted">0</strong></div>
+                <div>Correct<strong id="correct">0</strong></div>
+                <div>Incorrect<strong id="incorrect">0</strong></div>
+                <div>Score (%)<strong id="percentage">0%</strong></div>
+            </div>
+
+            <p id="bestResult"></p>
+            <h3>Answer Review</h3>
+            <div id="review"></div>
+
+            <button id="restartBtn">Play Again</button>
+            <button id="categoryBtn" class="secondary">
+                Change Category
+            </button>
+        </section>
+
+        <footer>Online Quiz Competition | HTML • CSS • JavaScript</footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+  </html>
+          
